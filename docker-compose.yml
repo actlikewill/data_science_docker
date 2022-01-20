@@ -1,0 +1,11 @@
+services:
+  notebook:
+    container_name: juju-notebook
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - "./notebooks:/notebooks"
+    
